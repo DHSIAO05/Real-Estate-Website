@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Sales - Jennifer Liu Homes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="https://www.morganhomeloan.com/" target="_blank">
+                <img src="images/morgan logo.webp" alt="Morgan Real Estate Logo" id="morgan__img">
+            </a>
+            <a href="/" id="navbar__logo">Jennifer Liu<br> Homes</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/recent-sales.html" class="navbar__links">Recent Sales</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/monthly-news.html" class="navbar__links">Monthly News</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="javascript:void(0)" class="button">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Recent Sales Section -->
+    <section class="recent-sales">
+        <h1>Recent Sales</h1>
+        <div class="sales-grid">
+            <div class="sales-item">
+                <a href="https://www.redfin.com/CA/Elk-Grove/9300-Quintanna-Ct-95758/home/19312614" target="_blank">
+                    <img src="images/Quintanna.webp" alt="Home 1">
+                </a>
+                <h2><a href="https://www.redfin.com/CA/Elk-Grove/9300-Quintanna-Ct-95758/home/19312614" target="_blank" class="price-link">$471,500</a></h2>
+                <p>2 beds | 2 baths | 1,044 sq. ft | 9,291 sq. ft</p>
+                <p>9300 Quintanna Ct, Elk Grove, CA 95758</p>
+            </div>
+            <div class="sales-item">
+                <a href="https://www.redfin.com/CA/Elk-Grove/4935-Chamberlin-Cir-95757/home/19058996" target="_blank">
+                    <img src="images/Chamberlin.webp" alt="Home 2">
+                </a>
+                <h2><a href="https://www.redfin.com/CA/Elk-Grove/4935-Chamberlin-Cir-95757/home/19058996" target="_blank" class="price-link">$610,000</a></h2>
+                <p>3 beds | 2 baths | 1,567 sq. ft | 6,443 sq. ft</p>
+                <p>4935 Chamberlin Cir, Elk Grove, CA 95757</p>
+            </div>
+            <div class="sales-item">
+                <a href="https://www.redfin.com/CA/San-Jose/1638-Stanwich-Rd-95131/home/1463502" target="_blank">
+                    <img src="images/Stanwich.webp" alt="Home 3">
+                </a>
+                <h2><a href="https://www.redfin.com/CA/San-Jose/1638-Stanwich-Rd-95131/home/1463502" target="_blank" class="price-link">$1,226,000</a></h2>
+                <p>3 beds | 2 baths | 1,041 sq. ft | 6,000 sq. ft</p>
+                <p>1638 Stanwich Rd, San Jose, CA 95131</p>
+            </div>
+            <div class="sales-item">
+                <a href="https://www.redfin.com/CA/San-Jose/1151-Bal-Harbor-Way-95122/home/1405041" target="_blank">
+                    <img src="images/BalHarbor.webp" alt="Home 4">
+                </a>
+                <h2><a href="https://www.redfin.com/CA/San-Jose/1151-Bal-Harbor-Way-95122/home/1405041" target="_blank" class="price-link">$886,000</a></h2>
+                <p>3 beds | 1.5 baths | 960 sq. ft | 5,000 sq. ft</p>
+                <p>1151 Bal Harbor Way, San Jose, CA 95122</p>
+            </div>
+            <div class="sales-item">
+                <a href="https://www.redfin.com/CA/San-Jose/1089-Lick-Ave-95110/home/1861952" target="_blank">
+                    <img src="images/Lick Ave.webp" alt="Home 4">
+                </a>
+                <h2><a href="https://www.redfin.com/CA/San-Jose/1089-Lick-Ave-95110/home/1861952" target="_blank" class="price-link">$850,000</a></h2>
+                <p>2 beds | 1 baths | 826 sq. ft | 5,570 sq. ft</p>
+                <p>1089 Lick Ave, San Jose, CA 95110</p>
+            </div>
+            <div class="sales-item">
+                <a href="https://www.redfin.com/CA/San-Jose/1445-Kooser-Rd-95118/home/1340466" target="_blank">
+                    <img src="images/Kooser Rd.webp" alt="Home 4">
+                </a>
+                <h2><a href="https://www.redfin.com/CA/San-Jose/1445-Kooser-Rd-95118/home/1340466" target="_blank" class="price-link">$1,230,000</a></h2>
+                <p>3 beds | 2 baths | 1,079 sq. ft | 6,024 sq. ft</p>
+                <p>1445 Kooser Rd, San Jose, CA 95118</p>
+            </div>
+            <!-- Add more sales items as necessary -->
+        </div>
+    </section>
+
+    <!-- Contact Form Pop-up -->
+    <div id="contactPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Work with Jennifer Liu</h2>
+            <form action="submit_form.php" method="POST">
+                <input type="text" id="name" name="name" placeholder="Full Name *" required>
+                
+                <input type="email" id="email" name="email" placeholder="Email *" required>
+                
+                <input type="tel" id="phone" name="phone" placeholder="Phone">
+                
+                <textarea id="comment" name="comment" placeholder="Comment"></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            
+            <div class="contact-info">
+                <div class="social-icons">
+                    <!-- Social media icons -->
+                    <a href="https://ibb.co/myWYM9V" target="_blank">
+                        <img src="images/wechat logo.webp" alt="WeChat"></a>
+                    <a href="https://ibb.co/wdwCyj9" target="_blank">
+                        <img src="images/line logo.webp" alt="LinkedIn"></a>
+                    <a href="https://www.instagram.com/jliu05_888/" target="_blank">
+                        <img src="images/instagram logo.webp" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

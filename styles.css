@@ -1,0 +1,665 @@
+/* Global styles for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Styles the logo image to be positioned on the left side of the navbar */
+.navbar__container img {
+    height: 50px; 
+    position: absolute; 
+    left: 20px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    margin-right: 20px;
+    width: 150px;
+}
+
+/* Styles the overall appearance of the navbar, including background color and alignment */
+.navbar {
+    background: #000000;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Manages the layout and spacing of navbar items, ensuring they are properly aligned */
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+/* Styles for the logo text in the navbar, including font size and appearance */
+#navbar__logo {
+    background-color: #ffffff;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: auto;
+}
+
+/* Adds spacing and styles to icons that might be used within the navbar */
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+/* Holds the menu items within the navbar, aligning them horizontally */
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+/* Styles for each menu item in the navbar, including height and alignment */
+.navbar__item {
+    height: 80px;
+}
+
+/* Styles for the links within the navbar, including color and hover effects */
+.navbar__links {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+/* Contains the call-to-action button in the navbar and aligns it properly */
+.navbar_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+/* General button styles, including background color, padding, and hover effects */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #000000;
+    color: #fff;
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    background: #636363;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for navbar links */
+.navbar__links:hover{
+    color: #636363;
+    transition: all 0.3s ease;
+}
+
+/* Responsive styling for medium screens */
+@media screen and (max-width: 1200px) {
+
+    .navbar__container {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        position: relative;
+        height: 80px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar__container img {
+        position: absolute;
+        left: 20px; 
+        height: 50px;
+        width: 150px;
+    }
+
+
+    #navbar__logo {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+        position: absolute;
+        left: 50%; 
+        transform: translateX(-50%); 
+    }
+
+    /* Positions the mobile menu button on smaller screens */
+    #mobile-menu {
+        position: absolute;
+        right: 20px; 
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    .navbar__menu.active {
+        background: #a7a6a6;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Further layout adjustments for small screen devices like smartphones */
+@media screen and (max-width: 600px) {
+    .navbar__container img {
+        position: absolute;
+        left: 20px; 
+        height: 40px;
+        width: 120px;
+    }
+
+    #navbar__logo {
+        font-size: 1.75rem; 
+        text-align: center;
+        margin: 0;
+        position: absolute;
+        left: 50%; 
+        transform: translateX(-50%); 
+    }
+}
+
+/*Body Section CSS */
+
+/* Styles for the main body of the webpage */
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the main section of the webpage */
+.main {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    max-width: 1900px;
+    padding: 50px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Styles for the content area within the main section */
+.main__content {
+    flex: 1; 
+    max-width: 600px; 
+    text-align: left; 
+}
+
+/* Container for the image in the main section */
+.main__img--container {
+    flex: 0 0 auto; 
+    margin-right: 100px;
+    max-width: 300px;
+}
+
+/* Styles for the image within the main section */
+#main__img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Styles for the main heading in the hero section */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Merriweather', serif;
+}
+
+/* Styles for paragraphs within the main section */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Button styling in the main section */
+.main__btn {
+    font-size: 1rem;
+    background-color: #007bff;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.35s;
+    outline: none;
+}
+
+/* Link styling within the main button */
+.main__btn a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* Hover effect for the button in the main section */
+.main__btn:hover {
+    background: #003a79;
+    transition: all 0.3s ease;
+}
+
+/* Responsive styles for the main section on medium screens */
+@media screen and (max-width: 1200px) {
+    .main {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 30px;
+    }
+
+    .main__content {
+        text-align: center;
+    }
+    
+    .main__img--container {
+        margin-bottom: 20px; 
+        width: 100%; 
+        max-width: 300px; 
+        margin: auto;
+        padding: 10px;
+    }
+
+    h1 {
+        text-align: center;  
+        font-size: 2rem;
+    }
+
+    p {
+        text-align: center; 
+        font-size: 1rem; 
+    }
+    
+    .main__btn {
+        margin: 0 auto; 
+    }
+}
+
+
+
+/* Main Recent Sales section */
+.recent-sales {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Heading styles within the Recent Sales section */
+.recent-sales h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Merriweather', serif;
+}
+
+/* Grid layout for displaying sales items */
+.sales-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the min size for responsive design */
+    gap: 50px;
+    justify-content: center; /* Ensures grid stays centered */
+    align-items: start;
+}
+
+/* Individual sales item container */
+.sales-item {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Image styling within sales items */
+.sales-item img {
+    width: 100%;
+    height: auto;
+    max-width: 450px; /* Decrease the maximum width */
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* Price heading styling within sales items */
+.sales-item h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Paragraph styling within sales items */
+.sales-item p {
+    margin: 5px 0;
+    color: #666666;
+    font-size: 1rem;
+}
+
+/* Styling for the price link within sales items */
+.price-link {
+    color: #000000; /* Set your desired link color */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Display a pointer cursor on hover */
+}
+
+/* Hover effect for the price link */
+.price-link:hover {
+    color: #0056b3; /* Darker color on hover */
+    text-decoration: underline; /* Underline the text on hover */
+    transform: scale(1.05); 
+    transition: transform 0.1s ease-in-out; 
+    cursor: pointer;
+}
+
+/* Hover effect for images within sales items */
+.sales-item img:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for price text within sales items */
+.sales-item h2:hover {
+    transform: scale(1.05); 
+    transition: transform 0.1s ease-in-out; 
+    cursor: pointer;
+}
+
+/* Responsive styles for medium screens */
+@media screen and (max-width: 960px) {
+    .sales-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 600px) {
+    .sales-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recent-sales {
+        padding: 20px;
+    }
+}
+
+
+/* Contact Section */
+
+/* Styles for the popup background */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the popup content box */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Styles for the close button of the popup */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Styles for the contact form title */
+.popup-content h2 {
+    margin-bottom: 20px; /* Add space between title and form */
+    font-size: 1.5rem; /* Adjust the font size if needed */
+}
+
+/* Form container styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for form labels */
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Styles for form input fields and textarea */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px; /* Increased margin for more spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Style the submit button within the form */
+form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Hover effect for the submit button */
+form button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+/* Styles for the contact information section */
+.contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Styles for social media icons */
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    .popup-content {
+        max-width: 95%; /* Adjust for smaller screens */
+    }
+}
+
+
+/* About Me Section CSS */
+
+/* Styles for the About Jennifer section */
+.about__jennifer {
+    display: block;
+    max-width: 1000px;
+    margin: 30px auto; 
+    padding: 0 20px; 
+    text-align: center; 
+    box-sizing: border-box; 
+}
+
+/* Aligns the title in the About Jennifer section */
+.about__jennifer h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+/* Styles for paragraphs in the About Jennifer section */
+.about__jennifer p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left; 
+}
+
+/* Responsive adjustments for the About Jennifer section */
+@media screen and (max-width: 1200px) {
+    .about__jennifer {
+        margin-top: 50px; 
+    }
+
+    .about__jennifer h2{
+        text-align: center;
+    }
+
+    .about__jennifer p{
+        text-align: center;
+    }
+}
+
+/* Monthly News Section */
+
+/* Styles for the Monthly News section */
+.monthly-news {
+    text-align: center;
+    margin: 40px auto;
+}
+
+/* Styles for the title in the Monthly News section */
+.monthly-news__title {
+    font-size: 2.5rem; 
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styles for news list headings */
+.news-list h1 {
+    font-size: 1.3rem; 
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Styles for the news list links */
+.news-list__link {
+    color: #007bff;
+}
+
+/* Hover effect for the news list links */
+.news-list__link:hover {
+    color: #0056b3; 
+    text-decoration: underline;
+}
+
+
+

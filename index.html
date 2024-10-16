@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="https://www.morganhomeloan.com/" target="_blank">
+                <img src="images/morgan logo.webp" alt="Morgan Real Estate Logo" id="morgan__img">
+            </a>
+            <a href="/" id="navbar__logo">Jennifer Liu<br> Homes</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/recent-sales.html" class="navbar__links">Recent Sales</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/monthly-news.html" class="navbar__links">Monthly News</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="javascript:void(0)" class="button">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Body Section-->
+    <div class="main">
+        <div class="main__img--container">
+            <img src="images/pic.webp" alt="pic" id="main__img">
+        </div>
+        <!-- Content Container: text and button -->
+        <div class="main__content">
+            <h1>Jennifer Liu</h1>
+            <p>Realtor® | DRE# 02202452<br>
+                jenniferliu5588@gmail.com<br>
+                M: 408-438-2280
+            </p>
+            <button class="popup-trigger main__btn"><a href="javascript:void(0)">Work with Jennifer Liu</a></button>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+        <div class="about__jennifer">
+            <h2>About Jennifer</h2>
+            <p>
+                My husband and I have lived in San Jose for 26+ years raising our three boys who played high school baseball, one played in the Pac-12 college baseball team. I am familiar with why the Bay Area is consistently ranked as the top place to live in America, thanks to exceptional people, work opportunities, neighborhoods, schools, and diverse activities.
+            </p>
+            <p>
+                I have a passion for real estate and 20+ years of experience in high-tech companies' customer support and negotiation. I strive to help clients find their dream homes. I am here to listen, understand your needs, and go above and beyond to deliver exceptional results. Together, let’s make your real estate dreams come true.
+            </p>
+        </div>
+
+    <!-- Contact Form Pop-up -->
+    <div id="contactPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Work with Jennifer Liu</h2>
+            <form id="contactForm" action="http://localhost:5500/send" method="POST">
+                <input type="text" id="name" name="name" placeholder="Full Name *" required>
+                <input type="email" id="email" name="email" placeholder="Email *" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone">
+                <textarea id="comment" name="comment" placeholder="Comment"></textarea>
+                <button type="submit">Send</button>
+            </form>
+            
+            <div class="contact-info">
+                <div class="social-icons">
+                    <!-- Social media icons -->
+                    <a href="https://ibb.co/myWYM9V" target="_blank">
+                        <img src="images/wechat logo.webp" alt="WeChat"></a>
+                    <a href="https://ibb.co/wdwCyj9" target="_blank">
+                        <img src="images/line logo.webp" alt="LinkedIn"></a>
+                    <a href="https://www.instagram.com/jliu05_888/" target="_blank">
+                        <img src="images/instagram logo.webp" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

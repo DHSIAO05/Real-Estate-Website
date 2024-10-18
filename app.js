@@ -59,30 +59,3 @@ window.onclick = function(event) {
         popup.style.display = "none";
     }
 }
-
-const form = document.querySelector('form');
-const fullName = document.getElementById("name");
-const email = document.getElementById("email");
-const phone = document.getElementById("phone");
-const comment = document.getElementById("comment");
-
-function sendEmail() {
-    const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Comment: ${comment.value}`;
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "hsiao.david888@gmail.com",
-        Password : "F98F34CF97B65D14E3ED8302B1FD4DE3018D",
-        To : 'hsiao.david888@gmail.com',
-        From : "hsiao.david888@gmail.com",
-        Subject : "Real Estate",
-        Body : bodyMessage
-    }).then(
-      message => alert(message)
-    );
-}
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    sendEmail();
-});

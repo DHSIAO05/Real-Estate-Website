@@ -69,7 +69,8 @@
         <div class="popup-content">
             <span class="close-btn">&times;</span>
             <h2>Work with Jennifer Liu</h2>
-            <form id="contactForm" action="http://localhost:5500/send" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="63ec28c2-5256-448f-8365-1c458bdf8c39">
                 <input type="text" id="name" name="name" placeholder="Full Name *" required>
                 <input type="email" id="email" name="email" placeholder="Email *" required>
                 <input type="tel" id="phone" name="phone" placeholder="Phone">
@@ -91,7 +92,6 @@
         </div>
     </div>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="app.js"></script>
 
     <script type="text/javascript">

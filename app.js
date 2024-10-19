@@ -59,3 +59,18 @@ window.onclick = function(event) {
         popup.style.display = "none";
     }
 }
+
+async function sendMessage() {
+    const message = document.getElementById("message").value;
+  
+    const response = await fetch('/.netlify/functions/chatbot', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ message }),
+    });
+  
+    const data = await response.json();
+    alert(data.reply); // Display the chatbot's response
+  }

@@ -94,19 +94,18 @@
 
     <script src="app.js"></script>
 
-    <script type="text/javascript">
-        (function(d, t) {
-            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            v.onload = function() {
-              window.voiceflow.chat.load({
-                verify: { projectID: '6711784c3a147da6099c2de7' },
-                url: 'https://general-runtime.voiceflow.com',
-                versionID: 'production'
-              });
-            }
-            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-        })(document, 'script');
-      </script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "K0fJ2DIQcPcgmgCNC3PA2",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="K0fJ2DIQcPcgmgCNC3PA2"
+        domain="www.chatbase.co"
+        defer>
+        </script>
       
 </body>
 </html>

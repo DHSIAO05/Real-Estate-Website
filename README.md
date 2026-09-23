@@ -72,7 +72,7 @@ Welcome to Jennifer Liu Homes, a real estate website designed to provide users w
 
 - `index.html`: The homepage of the website.
 - `recent-sales.html`: The page showcasing recent property sales.
-- `monthly-news.html`: The page containing monthly news and real estate updates.
+- `monthly-news.html`: The page containing monthly news and real estate updates. It is currently hidden: its links in the menus, footers, and home page are commented out and marked "hidden for now".
 - `contact.html`: The contact page.
 - `app.js`: Mobile menu, contact pop-up, form submission, and scroll animations.
 - `styles.css`: Styles for the entire website. Colors, fonts, and spacing are defined as variables at the top of the file.

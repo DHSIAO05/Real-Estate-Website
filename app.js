@@ -200,6 +200,97 @@ if ('IntersectionObserver' in window) {
     revealItems.forEach((item) => item.classList.add('is-visible'));
 }
 
+/* ---------- Stats count up when scrolled into view ---------- */
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const counters = document.querySelectorAll('[data-count]');
+
+function countUp(el) {
+    const target = parseFloat(el.dataset.count);
+    const decimals = (el.dataset.count.split('.')[1] || '').length;
+    const duration = 1600;
+    const start = performance.now();
+
+    function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = (target * eased).toFixed(decimals);
+        if (progress < 1) requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+}
+
+if (counters.length && !reduceMotion && 'IntersectionObserver' in window) {
+    counters.forEach((el) => { el.textContent = '0'; });
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            countUp(entry.target);
+            counterObserver.unobserve(entry.target);
+        });
+    }, { threshold: 0.6 });
+
+    counters.forEach((el) => counterObserver.observe(el));
+}
+
+/* ---------- Recent Sales: sort and filter ---------- */
+const salesGrid = document.querySelector('[data-sales]');
+const salesToolbar = document.querySelector('[data-sales-toolbar]');
+
+if (salesGrid && salesToolbar) {
+    const cards = Array.from(salesGrid.querySelectorAll('.listing'));
+    const sortSelect = salesToolbar.querySelector('select');
+    const filterButtons = salesToolbar.querySelectorAll('[data-filter]');
+    const countLabel = salesToolbar.querySelector('[data-sales-count]');
+    let filter = 'all';
+
+    const sorters = {
+        recent: (a, b) => b.dataset.sold.localeCompare(a.dataset.sold),
+        'price-desc': (a, b) => b.dataset.price - a.dataset.price,
+        'price-asc': (a, b) => a.dataset.price - b.dataset.price,
+    };
+
+    function applySales(animate) {
+        const sorted = cards.slice().sort(sorters[sortSelect.value]);
+        let shown = 0;
+
+        sorted.forEach((card) => {
+            // A "buyer seller" card matches both the Buyer and Seller filters
+            const match = filter === 'all' || card.dataset.role.split(' ').includes(filter);
+            card.hidden = !match;
+            salesGrid.appendChild(card);
+            if (!match) return;
+
+            if (!animate) {
+                // Stagger the scroll reveal across each row of three
+                card.style.setProperty('--delay', `${(shown % 3) * 0.1}s`);
+            } else {
+                card.classList.add('is-visible');
+                card.classList.remove('is-reshuffled');
+                void card.offsetWidth; // restart the animation
+                card.style.setProperty('--shuffle-delay', `${Math.min(shown, 8) * 0.05}s`);
+                card.classList.add('is-reshuffled');
+            }
+            shown += 1;
+        });
+
+        countLabel.textContent = `Showing ${shown} of ${cards.length} homes`;
+    }
+
+    sortSelect.addEventListener('change', () => applySales(true));
+
+    filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            filter = button.dataset.filter;
+            filterButtons.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+            applySales(true);
+        });
+    });
+
+    salesToolbar.hidden = false;
+    applySales(false);
+}
+
 /* ---------- Footer year ---------- */
 document.querySelectorAll('[data-year]').forEach((el) => {
     el.textContent = new Date().getFullYear();

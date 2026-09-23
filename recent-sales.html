@@ -42,21 +42,23 @@
                 <li><svg><use href="#i-mail"/></svg><a href="mailto:jenniferliu5588@gmail.com">jenniferliu5588@gmail.com</a></li>
                 <li><svg><use href="#i-id"/></svg>DRE# 02202452</li>
             </ul>
-            <a class="topbar__partner" href="https://www.morganhomeloan.com/" target="_blank" rel="noopener">
-                <img src="images/morgan logo.webp" alt="Morgan Real Estate">
-            </a>
         </div>
     </div>
 
     <header class="site-header">
         <nav class="container nav" aria-label="Main">
-            <a href="/" class="brand" aria-label="Jennifer Liu Homes, home">
-                <span class="brand__mark" aria-hidden="true">JL</span>
-                <span class="brand__text">
-                    <span class="brand__name">Jennifer Liu</span>
-                    <span class="brand__tag">Homes</span>
-                </span>
-            </a>
+            <div class="nav__brand">
+                <a href="/" class="brand" aria-label="Jennifer Liu Homes, home">
+                    <span class="brand__mark" aria-hidden="true">JL</span>
+                    <span class="brand__text">
+                        <span class="brand__name">Jennifer Liu</span>
+                        <span class="brand__tag">Homes</span>
+                    </span>
+                </a>
+                <a class="brand__partner" href="https://www.morganhomeloan.com/" target="_blank" rel="noopener">
+                    <img src="images/morgan-logo.png" alt="Morgan Real Estate &amp; Financial" width="600" height="172">
+                </a>
+            </div>
             <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
                 <span></span><span></span><span></span>
             </button>
@@ -67,12 +69,6 @@
                 <li><a href="monthly-news.html" class="nav__link">Monthly News</a></li>
                 -->
                 <li><a href="contact.html" class="nav__link">Contact</a></li>
-                <li><a href="contact.html" class="btn btn--gold btn--sm" data-contact>Work with Jennifer</a></li>
-                <li class="nav__partner">
-                    <a href="https://www.morganhomeloan.com/" target="_blank" rel="noopener">
-                        <img src="images/morgan logo.webp" alt="Morgan Real Estate">
-                    </a>
-                </li>
                 <li class="nav__contact">
                     <a href="tel:+14084382280">408-438-2280</a>
                     <a href="mailto:jenniferliu5588@gmail.com">jenniferliu5588@gmail.com</a>
@@ -91,7 +87,7 @@
                 <!-- Update these numbers when new sales are added -->
                 <div class="page-hero__stats">
                     <div><strong>19</strong><span>Homes sold</span></div>
-                    <div><strong>$21.4M</strong><span>Sales volume</span></div>
+                    <div><strong>$21.0M</strong><span>Sales volume</span></div>
                     <div><strong>7</strong><span>Cities</span></div>
                 </div>
             </div>
@@ -99,9 +95,60 @@
 
         <section class="section section--cream">
             <div class="container">
-                <!-- To add a sale: copy one <article class="listing"> block, paste it at the top, and update the details -->
-                <div class="listings">
-                    <article class="listing reveal">
+                <div class="sales-toolbar" data-sales-toolbar hidden>
+                    <div class="sales-filter" role="group" aria-label="Filter by side">
+                        <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+                        <button type="button" class="chip" data-filter="buyer" aria-pressed="false">Buyer</button>
+                        <button type="button" class="chip" data-filter="seller" aria-pressed="false">Seller</button>
+                    </div>
+                    <div class="sales-sort">
+                        <p class="sales-count" data-sales-count aria-live="polite"></p>
+                        <label for="sales-sort" class="sr-only">Sort sales</label>
+                        <select id="sales-sort">
+                            <option value="recent">Most recent</option>
+                            <option value="price-desc">Price: high to low</option>
+                            <option value="price-asc">Price: low to high</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- To add a sale: copy one <article class="listing"> block and update the details.
+                     data-price = sale price (digits only), data-sold = closing date (YYYY-MM-DD),
+                     data-role = "buyer", "seller", or "buyer seller". The page sorts itself by date. -->
+                <div class="listings" data-sales>
+                    <article class="listing reveal" data-price="1170338" data-sold="2026-09-22" data-role="buyer">
+                        <div class="listing__media">
+                            <img src="images/torrey pine.webp" alt="308 Torrey Pine Ter #510, Sunnyvale" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <p class="listing__role">Represented Buyer</p>
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Sunnyvale/308-Torrey-Pine-Ter-94086/unit-510/home/204704476" target="_blank" rel="noopener">$1,170,338<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>308 Torrey Pine Ter #510</strong>Sunnyvale, CA 94086</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,340</b> sq ft</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" data-price="945000" data-sold="2026-06-09" data-role="buyer seller">
+                        <div class="listing__media">
+                            <img src="images/Harliss Ave.jpg" alt="914 Harliss Ave, San Jose" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <p class="listing__role">Represented Buyer & Seller</p>
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/914-Harliss-Ave-95110/home/1262350" target="_blank" rel="noopener">$945,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>914 Harliss Ave</strong>San Jose, CA 95110</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>996</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>5,600</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" data-price="1400000" data-sold="2026-03-30" data-role="buyer seller">
                         <div class="listing__media">
                             <img src="images/La Mesa Ter.jpg" alt="982 La Mesa Ter, Unit E, Sunnyvale" loading="lazy">
                             <span class="listing__badge">SOLD</span>
@@ -117,7 +164,24 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal" style="--delay: 0.1s">
+                    <article class="listing reveal" data-price="951000" data-sold="2026-03-02" data-role="buyer">
+                        <div class="listing__media">
+                            <img src="images/Spiro Dr.jpg" alt="1127 Spiro Dr, San Jose" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <p class="listing__role">Represented Buyer</p>
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/1127-Spiro-Dr-95116/home/735836" target="_blank" rel="noopener">$951,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>1127 Spiro Dr</strong>San Jose, CA 95116</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,101</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>4,305</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" data-price="1880000" data-sold="2026-02-04" data-role="buyer">
                         <div class="listing__media">
                             <img src="images/Menzel Pl.jpg" alt="2338 Menzel Pl, Santa Clara" loading="lazy">
                             <span class="listing__badge">SOLD</span>
@@ -134,24 +198,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal" style="--delay: 0.2s">
-                        <div class="listing__media">
-                            <img src="images/Spiro Dr.jpg" alt="1127 Spiro Dr, San Jose" loading="lazy">
-                            <span class="listing__badge">SOLD</span>
-                        </div>
-                        <div class="listing__body">
-                            <p class="listing__role">Represented Buyer</p>
-                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/1127-Spiro-Dr-95116/home/735836" target="_blank" rel="noopener">$899,000<span class="sr-only"> (view on Redfin)</span></a></h2>
-                            <p class="listing__address"><strong>1127 Spiro Dr</strong>San Jose, CA 95116</p>
-                            <ul class="listing__facts">
-                                <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
-                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
-                                <li><svg><use href="#i-area"/></svg><b>1,101</b> sq ft</li>
-                                <li><svg><use href="#i-lot"/></svg><b>4,305</b> sq ft lot</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="listing reveal">
+                    <article class="listing reveal" data-price="1575000" data-sold="2025-12-08" data-role="buyer">
                         <div class="listing__media">
                             <img src="images/Hazelton Ave.jpg" alt="232 Hazelton Ave, Sunnyvale" loading="lazy">
                             <span class="listing__badge">SOLD</span>
@@ -168,23 +215,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal" style="--delay: 0.1s">
-                        <div class="listing__media">
-                            <img src="images/torrey pine.webp" alt="308 Torrey Pine Ter #510, Sunnyvale" loading="lazy">
-                            <span class="listing__badge">SOLD</span>
-                        </div>
-                        <div class="listing__body">
-                            <p class="listing__role">Represented Buyer</p>
-                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Sunnyvale/308-Torrey-Pine-Ter-94086/unit-510/home/204704476" target="_blank" rel="noopener">$1,170,338<span class="sr-only"> (view on Redfin)</span></a></h2>
-                            <p class="listing__address"><strong>308 Torrey Pine Ter #510</strong>Sunnyvale, CA 94086</p>
-                            <ul class="listing__facts">
-                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
-                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
-                                <li><svg><use href="#i-area"/></svg><b>1,340</b> sq ft</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="listing reveal" style="--delay: 0.2s">
+                    <article class="listing reveal" data-price="768000" data-sold="2025-09-19" data-role="buyer">
                         <div class="listing__media">
                             <img src="images/Boardwalk Pl.jpg" alt="820 Boardwalk Pl, Redwood City" loading="lazy">
                             <span class="listing__badge">SOLD</span>
@@ -200,7 +231,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal">
+                    <article class="listing reveal" data-price="560000" data-sold="2025-07-31" data-role="buyer">
                         <div class="listing__media">
                             <img src="images/Alta Mira Dr.jpg" alt="1043 Alta Mira Dr, Unit B, Santa Clara" loading="lazy">
                             <span class="listing__badge">SOLD</span>
@@ -216,7 +247,24 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal" style="--delay: 0.1s">
+                    <article class="listing reveal" data-price="775000" data-sold="2025-06-30" data-role="buyer">
+                        <div class="listing__media">
+                            <img src="images/Dubar Pl.jpg" alt="27239 Dunbar Pl, Hayward" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <p class="listing__role">Represented Buyer</p>
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Hayward/27239-Dunbar-Pl-94544/home/1875939" target="_blank" rel="noopener">$775,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>27239 Dunbar Pl</strong>Hayward, CA 94544</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>4</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,480</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>6,000</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" data-price="1700888" data-sold="2025-03-05" data-role="buyer">
                         <div class="listing__media">
                             <img src="images/Rothland Ct.jpg" alt="1335 Rothland Ct, San Jose" loading="lazy">
                             <span class="listing__badge">SOLD</span>
@@ -233,14 +281,14 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal" style="--delay: 0.2s">
+                    <article class="listing reveal" data-price="640000" data-sold="2024-04-02" data-role="buyer">
                         <div class="listing__media">
                             <img src="images/Wexted Way.jpg" alt="10065 Wexted Way, Elk Grove" loading="lazy">
                             <span class="listing__badge">SOLD</span>
                         </div>
                         <div class="listing__body">
                             <p class="listing__role">Represented Buyer</p>
-                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Elk-Grove/10065-Wexted-Way-95757/home/19068357" target="_blank" rel="noopener">$645,949<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Elk-Grove/10065-Wexted-Way-95757/home/19068357" target="_blank" rel="noopener">$640,000<span class="sr-only"> (view on Redfin)</span></a></h2>
                             <p class="listing__address"><strong>10065 Wexted Way</strong>Elk Grove, CA 95757</p>
                             <ul class="listing__facts">
                                 <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
@@ -250,31 +298,30 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal">
+                    <article class="listing reveal" data-price="615000" data-sold="2024-02-23" data-role="seller">
                         <div class="listing__media">
-                            <img src="images/Dubar Pl.jpg" alt="27239 Dunbar Pl, Hayward" loading="lazy">
+                            <img src="images/Galveston Ave.jpg" alt="2134 Galveston Ave, Unit B, San Jose" loading="lazy">
                             <span class="listing__badge">SOLD</span>
                         </div>
                         <div class="listing__body">
-                            <p class="listing__role">Represented Buyer</p>
-                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Hayward/27239-Dunbar-Pl-94544/home/1875939" target="_blank" rel="noopener">$798,000<span class="sr-only"> (view on Redfin)</span></a></h2>
-                            <p class="listing__address"><strong>27239 Dunbar Pl</strong>Hayward, CA 94544</p>
+                            <p class="listing__role">Represented Seller</p>
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/2134-Galveston-Ave-95122/unit-B/home/1849911" target="_blank" rel="noopener">$615,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>2134 Galveston Ave, Unit B</strong>San Jose, CA 95122</p>
                             <ul class="listing__facts">
-                                <li><svg><use href="#i-bed"/></svg><b>4</b> bd</li>
-                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
-                                <li><svg><use href="#i-area"/></svg><b>1,480</b> sq ft</li>
-                                <li><svg><use href="#i-lot"/></svg><b>6,000</b> sq ft lot</li>
+                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>1</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>885</b> sq ft</li>
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal" style="--delay: 0.1s">
+                    <article class="listing reveal" data-price="2785000" data-sold="2024-02-13" data-role="buyer">
                         <div class="listing__media">
                             <img src="images/Colorado Ave.jpg" alt="1011 Colorado Ave, Palo Alto" loading="lazy">
                             <span class="listing__badge">SOLD</span>
                         </div>
                         <div class="listing__body">
                             <p class="listing__role">Represented Buyer</p>
-                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Palo-Alto/1011-Colorado-Ave-94303/home/1349382" target="_blank" rel="noopener">$3,116,099<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Palo-Alto/1011-Colorado-Ave-94303/home/1349382" target="_blank" rel="noopener">$2,785,000<span class="sr-only"> (view on Redfin)</span></a></h2>
                             <p class="listing__address"><strong>1011 Colorado Ave</strong>Palo Alto, CA 94303</p>
                             <ul class="listing__facts">
                                 <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
@@ -284,40 +331,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal" style="--delay: 0.2s">
-                        <div class="listing__media">
-                            <img src="images/Galveston Ave.jpg" alt="2134 Galveston Ave, Unit B, San Jose" loading="lazy">
-                            <span class="listing__badge">SOLD</span>
-                        </div>
-                        <div class="listing__body">
-                            <p class="listing__role">Represented Seller</p>
-                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/2134-Galveston-Ave-95122/unit-B/home/1849911" target="_blank" rel="noopener">$621,696<span class="sr-only"> (view on Redfin)</span></a></h2>
-                            <p class="listing__address"><strong>2134 Galveston Ave, Unit B</strong>San Jose, CA 95122</p>
-                            <ul class="listing__facts">
-                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
-                                <li><svg><use href="#i-bath"/></svg><b>1</b> ba</li>
-                                <li><svg><use href="#i-area"/></svg><b>885</b> sq ft</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="listing reveal">
-                        <div class="listing__media">
-                            <img src="images/Harliss Ave.jpg" alt="914 Harliss Ave, San Jose" loading="lazy">
-                            <span class="listing__badge">SOLD</span>
-                        </div>
-                        <div class="listing__body">
-                            <p class="listing__role">Represented Buyer & Seller</p>
-                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/914-Harliss-Ave-95110/home/1262350" target="_blank" rel="noopener">$996,000<span class="sr-only"> (view on Redfin)</span></a></h2>
-                            <p class="listing__address"><strong>914 Harliss Ave</strong>San Jose, CA 95110</p>
-                            <ul class="listing__facts">
-                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
-                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
-                                <li><svg><use href="#i-area"/></svg><b>996</b> sq ft</li>
-                                <li><svg><use href="#i-lot"/></svg><b>5,600</b> sq ft lot</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="listing reveal" style="--delay: 0.1s">
+                    <article class="listing reveal" data-price="1230000" data-sold="2023-10-16" data-role="buyer">
                         <div class="listing__media">
                             <img src="images/Kooser Rd.webp" alt="1445 Kooser Rd, San Jose" loading="lazy">
                             <span class="listing__badge">SOLD</span>
@@ -334,24 +348,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal" style="--delay: 0.2s">
-                        <div class="listing__media">
-                            <img src="images/Lick Ave.webp" alt="1089 Lick Ave, San Jose" loading="lazy">
-                            <span class="listing__badge">SOLD</span>
-                        </div>
-                        <div class="listing__body">
-                            <p class="listing__role">Represented Buyer</p>
-                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/1089-Lick-Ave-95110/home/1861952" target="_blank" rel="noopener">$850,000<span class="sr-only"> (view on Redfin)</span></a></h2>
-                            <p class="listing__address"><strong>1089 Lick Ave</strong>San Jose, CA 95110</p>
-                            <ul class="listing__facts">
-                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
-                                <li><svg><use href="#i-bath"/></svg><b>1</b> ba</li>
-                                <li><svg><use href="#i-area"/></svg><b>826</b> sq ft</li>
-                                <li><svg><use href="#i-lot"/></svg><b>5,570</b> sq ft lot</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="listing reveal">
+                    <article class="listing reveal" data-price="886000" data-sold="2023-09-29" data-role="seller">
                         <div class="listing__media">
                             <img src="images/BalHarbor.webp" alt="1151 Bal Harbor Way, San Jose" loading="lazy">
                             <span class="listing__badge">SOLD</span>
@@ -368,7 +365,24 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal" style="--delay: 0.1s">
+                    <article class="listing reveal" data-price="850000" data-sold="2023-09-26" data-role="buyer">
+                        <div class="listing__media">
+                            <img src="images/Lick Ave.webp" alt="1089 Lick Ave, San Jose" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <p class="listing__role">Represented Buyer</p>
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/1089-Lick-Ave-95110/home/1861952" target="_blank" rel="noopener">$850,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>1089 Lick Ave</strong>San Jose, CA 95110</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>1</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>826</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>5,570</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" data-price="1226000" data-sold="2023-09-11" data-role="buyer">
                         <div class="listing__media">
                             <img src="images/Stanwich.webp" alt="1638 Stanwich Rd, San Jose" loading="lazy">
                             <span class="listing__badge">SOLD</span>
@@ -385,7 +399,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal" style="--delay: 0.2s">
+                    <article class="listing reveal" data-price="610000" data-sold="2023-08-11" data-role="buyer">
                         <div class="listing__media">
                             <img src="images/Chamberlin.webp" alt="4935 Chamberlin Cir, Elk Grove" loading="lazy">
                             <span class="listing__badge">SOLD</span>
@@ -402,7 +416,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="listing reveal">
+                    <article class="listing reveal" data-price="471500" data-sold="2023-03-28" data-role="buyer">
                         <div class="listing__media">
                             <img src="images/Quintanna.webp" alt="9300 Quintanna Ct, Elk Grove" loading="lazy">
                             <span class="listing__badge">SOLD</span>
@@ -442,7 +456,7 @@
         <div class="container">
             <div class="footer__grid">
                 <div class="footer__brand">
-                    <a href="/" class="brand" aria-label="Jennifer Liu Homes, home">
+                <a href="/" class="brand" aria-label="Jennifer Liu Homes, home">
                         <span class="brand__mark" aria-hidden="true">JL</span>
                         <span class="brand__text">
                             <span class="brand__name">Jennifer Liu</span>
@@ -473,7 +487,7 @@
                         <li class="footer__dre">Realtor® · DRE# 02202452</li>
                     </ul>
                     <a class="footer__partner" href="https://www.morganhomeloan.com/" target="_blank" rel="noopener">
-                        <img src="images/morgan logo.webp" alt="Morgan Real Estate">
+                        <img src="images/morgan-logo.png" alt="Morgan Real Estate &amp; Financial" width="600" height="172" loading="lazy">
                     </a>
                 </div>
             </div>

@@ -25,9 +25,9 @@ Welcome to Jennifer Liu Homes, a real estate website designed to provide users w
 </div>
 
 - **Responsive Navigation Bar**: A responsive navigation bar that includes links to the main sections of the site (Home, Recent Sales, Monthly News, and Contact).
-- **Contact Form**: Users can reach Jennifer Liu from the Contact page or from the "Work with Jennifer" pop-up available on every page. The form captures name, email, phone, what they're interested in, and a message, and sends without leaving the page.
+- **Contact Form**: Users can reach Jennifer Liu from the Contact page or from the "Work with Jennifer" pop-up on the home page. The form captures name, email, phone, what they're interested in, and a message, and sends without leaving the page.
 - **Interactive Chatbot**: An embedded chatbot assists users with questions about Jennifer Liu Homes and provides general information based on user input.
-- **Property Listings (Recent Sales)**: Displays recent sales data including property images, prices, and details like the number of bedrooms, bathrooms, and square footage.
+- **Property Listings (Recent Sales)**: Displays recent sales data including property images, prices, sold dates, and details like the number of bedrooms, bathrooms, and square footage. Visitors can sort by most recent or price and filter by buyer or seller side.
 - **Monthly News Section**: Provides updates on the real estate market and other industry insights, with links to detailed articles.
 - **About Jennifer Section**: Introduces Jennifer Liu, her background, and her expertise in the real estate market.
 
@@ -79,7 +79,7 @@ Welcome to Jennifer Liu Homes, a real estate website designed to provide users w
 
 ### Updating content
 
-- **New sale**: In `recent-sales.html`, copy an `<article class="listing">` block, paste it at the top of the list, and update the photo, Redfin link, price, and details. Update the totals in the page header and the stats on the home page, and swap the newest sale into the home page's "Recently sold" section.
+- **New sale**: In `recent-sales.html`, copy an `<article class="listing">` block, paste it at the top of the list, and update the photo, Redfin link, price, and details. Set `data-price` (digits only), `data-sold` (closing date, `YYYY-MM-DD`), and `data-role` (`buyer`, `seller`, or `buyer seller`). The page sorts the sales by that date automatically. Update the totals in the page header and the stats on the home page (change both the number and its `data-count`), and swap the newest sale into the home page's "Recently sold" section.
 - **New market report**: In `monthly-news.html`, copy a `news-card` link, paste it at the top, and move the `news-card--featured` class onto it. Update the home page's "latest market reports" section to match.
 
 <div style="text-align: center;">

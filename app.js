@@ -33,7 +33,7 @@ menu.addEventListener('click', (event) => {
     if (event.target.closest('a')) setMenu(false);
 });
 
-window.matchMedia('(min-width: 1025px)').addEventListener('change', (event) => {
+window.matchMedia('(min-width: 1101px)').addEventListener('change', (event) => {
     if (event.matches) setMenu(false);
 });
 

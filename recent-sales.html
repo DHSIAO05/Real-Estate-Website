@@ -3,208 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recent Sales - Jennifer Liu Homes</title>
+    <title>Recent Sales | Jennifer Liu Homes</title>
+    <meta name="description" content="Homes recently sold by Jennifer Liu, Realtor®, across San Jose, Santa Clara, Palo Alto, Hayward, and Elk Grove.">
+    <meta property="og:title" content="Recent Sales | Jennifer Liu Homes">
+    <meta property="og:description" content="Homes recently sold by Jennifer Liu, Realtor®, across San Jose, Santa Clara, Palo Alto, Hayward, and Elk Grove.">
+    <meta name="theme-color" content="#0b1a30">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230b1a30'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23d6b878'%3EJL%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="/" id="navbar__logo">Jennifer Liu<br> Homes</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links">Home</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/recent-sales.html" class="navbar__links">Recent Sales</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/monthly-news.html" class="navbar__links">Monthly News</a>
-                </li>
-                <li class="navbar__btn">
-                    <a href="javascript:void(0)" class="button">Contact</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="https://www.morganhomeloan.com/" class="navbar__links">
-                        <img src="images/morgan logo.webp" alt="Morgan Real Estate Logo" id="morgan__img">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+            <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+            <symbol id="i-id" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M15 8h2M15 12h2M7 16h10"/></symbol>
+            <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></symbol>
+            <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+            <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+            <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.5"/></symbol>
+            <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/></symbol>
+            <symbol id="i-bed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/></symbol>
+            <symbol id="i-bath" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.68 3 4 3.68 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><path d="M2 12h20M7 19v2M17 19v2"/></symbol>
+            <symbol id="i-area" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></symbol>
+            <symbol id="i-lot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></symbol>
+        </defs>
+    </svg>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="container nav" aria-label="Main">
+            <a href="/" class="brand" aria-label="Jennifer Liu Homes, home">
+                <span class="brand__mark" aria-hidden="true">JL</span>
+                <span class="brand__text">
+                    <span class="brand__name">Jennifer Liu</span>
+                    <span class="brand__tag">Homes</span>
+                </span>
+            </a>
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="/" class="nav__link">Home</a></li>
+                <li><a href="recent-sales.html" class="nav__link" aria-current="page">Recent Sales</a></li>
+                <li><a href="monthly-news.html" class="nav__link">Monthly News</a></li>
+                <li><a href="contact.html" class="nav__link">Contact</a></li>
+                <li><a href="contact.html" class="btn btn--gold btn--sm" data-contact>Work with Jennifer</a></li>
+                <li class="nav__partner">
+                    <a href="https://www.morganhomeloan.com/" target="_blank" rel="noopener">
+                        <img src="images/morgan logo.webp" alt="Morgan Real Estate">
                     </a>
                 </li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Recent Sales Section -->
-    <section class="recent-sales">
-        <h1>Recent Sales</h1>
-        <div class="sales-grid">
-            <!-- Add more sales items as necessary -->
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/Santa-Clara/2338-Menzel-Pl-95050/home/1138555" target="_blank">
-                    <img src="images/Menzel Pl.jpg" alt="Home 14">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/Santa-Clara/2338-Menzel-Pl-95050/home/1138555" target="_blank" class="price-link">$1,880,000</a></h2>
-                <p>3 beds | 2 baths | 1,485 sq. ft | 6,028 sq. ft</p>
-                <p>2338 Menzel Pl, Santa Clara, CA 95050</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/San-Jose/1127-Spiro-Dr-95116/home/735836" target="_blank">
-                    <img src="images/Spiro Dr.jpg" alt="Home 13">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/San-Jose/1127-Spiro-Dr-95116/home/735836" target="_blank" class="price-link">$899,000</a></h2>
-                <p>3 beds | 2 baths | 1,101 sq. ft | 4,305 sq. ft</p>
-                <p>1127 Spiro Dr, San Jose, CA 95116</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/San-Jose/1335-Rothland-Ct-95131/home/1166162" target="_blank">
-                    <img src="images/Rothland Ct.jpg" alt="Home 12">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/San-Jose/1335-Rothland-Ct-95131/home/1166162" target="_blank" class="price-link">$1,700,888</a></h2>
-                <p>4 beds | 2 baths | 1,234 sq. ft | 6,441 sq. ft</p>
-                <p>1335 Rothland Ct, San Jose, CA 95131</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/Elk-Grove/10065-Wexted-Way-95757/home/19068357" target="_blank">
-                    <img src="images/Wexted Way.jpg" alt="Home 11">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/Elk-Grove/10065-Wexted-Way-95757/home/19068357" target="_blank" class="price-link">$645,949</a></h2>
-                <p>3 beds | 2.5 baths | 2,061 sq. ft | 4,687 sq. ft</p>
-                <p>10065 Wexted Way, Elk Grove, CA 95757</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/Hayward/27239-Dunbar-Pl-94544/home/1875939" target="_blank">
-                    <img src="images/Dubar Pl.jpg" alt="Home 10">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/Hayward/27239-Dunbar-Pl-94544/home/1875939" target="_blank" class="price-link">$798,000</a></h2>
-                <p>4 beds | 2 baths | 1,480 sq. ft | 6,000 sq. ft</p>
-                <p>27239 Dunbar Pl, Hayward, CA 94544</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/Palo-Alto/1011-Colorado-Ave-94303/home/1349382" target="_blank">
-                    <img src="images/Colorado Ave.jpg" alt="Home 9">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/Palo-Alto/1011-Colorado-Ave-94303/home/1349382" target="_blank" class="price-link">$3,116,099</a></h2>
-                <p>3 beds | 2 baths | 1,615 sq. ft | 7,876 sq. ft</p>
-                <p>1011 Colorado Ave, Palo Alto, CA 94303</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/San-Jose/2134-Galveston-Ave-95122/unit-B/home/1849911" target="_blank">
-                    <img src="images/Galveston Ave.jpg" alt="Home 8">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/San-Jose/2134-Galveston-Ave-95122/unit-B/home/1849911" target="_blank" class="price-link">$621,696</a></h2>
-                <p>2 beds | 1 bath | 885 sq. ft</p>
-                <p>2134 Galveston Ave Unit B, San Jose, CA 95122</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/San-Jose/914-Harliss-Ave-95110/home/1262350" target="_blank">
-                    <img src="images/Harliss Ave.jpg" alt="Home 7">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/San-Jose/914-Harliss-Ave-95110/home/1262350" target="_blank" class="price-link">$996,000</a></h2>
-                <p>2 beds | 2 baths | 996 sq. ft | 5,600 sq. ft</p>
-                <p>914 Harliss Ave, San Jose, CA 95110</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/San-Jose/1445-Kooser-Rd-95118/home/1340466" target="_blank">
-                    <img src="images/Kooser Rd.webp" alt="Home 6">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/San-Jose/1445-Kooser-Rd-95118/home/1340466" target="_blank" class="price-link">$1,230,000</a></h2>
-                <p>3 beds | 2 baths | 1,079 sq. ft | 6,024 sq. ft</p>
-                <p>1445 Kooser Rd, San Jose, CA 95118</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/San-Jose/1089-Lick-Ave-95110/home/1861952" target="_blank">
-                    <img src="images/Lick Ave.webp" alt="Home 5">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/San-Jose/1089-Lick-Ave-95110/home/1861952" target="_blank" class="price-link">$850,000</a></h2>
-                <p>2 beds | 1 baths | 826 sq. ft | 5,570 sq. ft</p>
-                <p>1089 Lick Ave, San Jose, CA 95110</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/San-Jose/1151-Bal-Harbor-Way-95122/home/1405041" target="_blank">
-                    <img src="images/BalHarbor.webp" alt="Home 4">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/San-Jose/1151-Bal-Harbor-Way-95122/home/1405041" target="_blank" class="price-link">$886,000</a></h2>
-                <p>3 beds | 1.5 baths | 960 sq. ft | 5,000 sq. ft</p>
-                <p>1151 Bal Harbor Way, San Jose, CA 95122</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/San-Jose/1638-Stanwich-Rd-95131/home/1463502" target="_blank">
-                    <img src="images/Stanwich.webp" alt="Home 3">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/San-Jose/1638-Stanwich-Rd-95131/home/1463502" target="_blank" class="price-link">$1,226,000</a></h2>
-                <p>3 beds | 2 baths | 1,041 sq. ft | 6,000 sq. ft</p>
-                <p>1638 Stanwich Rd, San Jose, CA 95131</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/Elk-Grove/4935-Chamberlin-Cir-95757/home/19058996" target="_blank">
-                    <img src="images/Chamberlin.webp" alt="Home 2">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/Elk-Grove/4935-Chamberlin-Cir-95757/home/19058996" target="_blank" class="price-link">$610,000</a></h2>
-                <p>3 beds | 2 baths | 1,567 sq. ft | 6,443 sq. ft</p>
-                <p>4935 Chamberlin Cir, Elk Grove, CA 95757</p>
-            </div>
-            <div class="sales-item">
-                <a href="https://www.redfin.com/CA/Elk-Grove/9300-Quintanna-Ct-95758/home/19312614" target="_blank">
-                    <img src="images/Quintanna.webp" alt="Home 1">
-                </a>
-                <h2><a href="https://www.redfin.com/CA/Elk-Grove/9300-Quintanna-Ct-95758/home/19312614" target="_blank" class="price-link">$471,500</a></h2>
-                <p>2 beds | 2 baths | 1,044 sq. ft | 9,291 sq. ft</p>
-                <p>9300 Quintanna Ct, Elk Grove, CA 95758</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form Pop-up -->
-    <div id="contactPopup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn">&times;</span>
-            <h2>Work with Jennifer Liu</h2>
-            <form action="submit_form.php" method="POST">
-                <input type="text" id="name" name="name" placeholder="Full Name *" required>
-                
-                <input type="email" id="email" name="email" placeholder="Email *" required>
-                
-                <input type="tel" id="phone" name="phone" placeholder="Phone">
-                
-                <textarea id="comment" name="comment" placeholder="Comment"></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
-            
-            <div class="contact-info">
-                <div class="social-icons">
-                    <!-- Social media icons -->
-                    <a href="https://ibb.co/myWYM9V" target="_blank">
-                        <img src="images/wechat logo.webp" alt="WeChat"></a>
-                    <a href="https://ibb.co/wdwCyj9" target="_blank">
-                        <img src="images/line logo.webp" alt="LinkedIn"></a>
-                    <a href="https://www.instagram.com/jliu05_888/" target="_blank">
-                        <img src="images/instagram logo.webp" alt="Instagram"></a>
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">Proven Results</p>
+                <h1>Recent Sales</h1>
+                <p>A selection of homes Jennifer has recently helped buyers and sellers close on across the Bay Area and beyond.</p>
+                <!-- Update these numbers when new sales are added -->
+                <div class="page-hero__stats">
+                    <div><strong>14</strong><span>Homes sold</span></div>
+                    <div><strong>$15.9M</strong><span>Sales volume</span></div>
+                    <div><strong>5</strong><span>Cities</span></div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <section class="section section--cream">
+            <div class="container">
+                <!-- To add a sale: copy one <article class="listing"> block, paste it at the top, and update the details -->
+                <div class="listings">
+                    <article class="listing reveal">
+                        <div class="listing__media">
+                            <img src="images/Menzel Pl.jpg" alt="2338 Menzel Pl, Santa Clara" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Santa-Clara/2338-Menzel-Pl-95050/home/1138555" target="_blank" rel="noopener">$1,880,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>2338 Menzel Pl</strong>Santa Clara, CA 95050</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,485</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>6,028</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" style="--delay: 0.1s">
+                        <div class="listing__media">
+                            <img src="images/Spiro Dr.jpg" alt="1127 Spiro Dr, San Jose" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/1127-Spiro-Dr-95116/home/735836" target="_blank" rel="noopener">$899,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>1127 Spiro Dr</strong>San Jose, CA 95116</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,101</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>4,305</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" style="--delay: 0.2s">
+                        <div class="listing__media">
+                            <img src="images/Rothland Ct.jpg" alt="1335 Rothland Ct, San Jose" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/1335-Rothland-Ct-95131/home/1166162" target="_blank" rel="noopener">$1,700,888<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>1335 Rothland Ct</strong>San Jose, CA 95131</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>4</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,234</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>6,441</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal">
+                        <div class="listing__media">
+                            <img src="images/Wexted Way.jpg" alt="10065 Wexted Way, Elk Grove" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Elk-Grove/10065-Wexted-Way-95757/home/19068357" target="_blank" rel="noopener">$645,949<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>10065 Wexted Way</strong>Elk Grove, CA 95757</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2.5</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>2,061</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>4,687</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" style="--delay: 0.1s">
+                        <div class="listing__media">
+                            <img src="images/Dubar Pl.jpg" alt="27239 Dunbar Pl, Hayward" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Hayward/27239-Dunbar-Pl-94544/home/1875939" target="_blank" rel="noopener">$798,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>27239 Dunbar Pl</strong>Hayward, CA 94544</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>4</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,480</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>6,000</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" style="--delay: 0.2s">
+                        <div class="listing__media">
+                            <img src="images/Colorado Ave.jpg" alt="1011 Colorado Ave, Palo Alto" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Palo-Alto/1011-Colorado-Ave-94303/home/1349382" target="_blank" rel="noopener">$3,116,099<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>1011 Colorado Ave</strong>Palo Alto, CA 94303</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,615</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>7,876</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal">
+                        <div class="listing__media">
+                            <img src="images/Galveston Ave.jpg" alt="2134 Galveston Ave, Unit B, San Jose" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/2134-Galveston-Ave-95122/unit-B/home/1849911" target="_blank" rel="noopener">$621,696<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>2134 Galveston Ave, Unit B</strong>San Jose, CA 95122</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>1</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>885</b> sq ft</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" style="--delay: 0.1s">
+                        <div class="listing__media">
+                            <img src="images/Harliss Ave.jpg" alt="914 Harliss Ave, San Jose" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/914-Harliss-Ave-95110/home/1262350" target="_blank" rel="noopener">$996,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>914 Harliss Ave</strong>San Jose, CA 95110</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>996</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>5,600</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" style="--delay: 0.2s">
+                        <div class="listing__media">
+                            <img src="images/Kooser Rd.webp" alt="1445 Kooser Rd, San Jose" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/1445-Kooser-Rd-95118/home/1340466" target="_blank" rel="noopener">$1,230,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>1445 Kooser Rd</strong>San Jose, CA 95118</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,079</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>6,024</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal">
+                        <div class="listing__media">
+                            <img src="images/Lick Ave.webp" alt="1089 Lick Ave, San Jose" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/1089-Lick-Ave-95110/home/1861952" target="_blank" rel="noopener">$850,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>1089 Lick Ave</strong>San Jose, CA 95110</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>1</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>826</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>5,570</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" style="--delay: 0.1s">
+                        <div class="listing__media">
+                            <img src="images/BalHarbor.webp" alt="1151 Bal Harbor Way, San Jose" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/1151-Bal-Harbor-Way-95122/home/1405041" target="_blank" rel="noopener">$886,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>1151 Bal Harbor Way</strong>San Jose, CA 95122</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>1.5</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>960</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>5,000</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" style="--delay: 0.2s">
+                        <div class="listing__media">
+                            <img src="images/Stanwich.webp" alt="1638 Stanwich Rd, San Jose" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/San-Jose/1638-Stanwich-Rd-95131/home/1463502" target="_blank" rel="noopener">$1,226,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>1638 Stanwich Rd</strong>San Jose, CA 95131</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,041</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>6,000</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal">
+                        <div class="listing__media">
+                            <img src="images/Chamberlin.webp" alt="4935 Chamberlin Cir, Elk Grove" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Elk-Grove/4935-Chamberlin-Cir-95757/home/19058996" target="_blank" rel="noopener">$610,000<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>4935 Chamberlin Cir</strong>Elk Grove, CA 95757</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>3</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,567</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>6,443</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="listing reveal" style="--delay: 0.1s">
+                        <div class="listing__media">
+                            <img src="images/Quintanna.webp" alt="9300 Quintanna Ct, Elk Grove" loading="lazy">
+                            <span class="listing__badge">SOLD</span>
+                        </div>
+                        <div class="listing__body">
+                            <h2 class="listing__price"><a href="https://www.redfin.com/CA/Elk-Grove/9300-Quintanna-Ct-95758/home/19312614" target="_blank" rel="noopener">$471,500<span class="sr-only"> (view on Redfin)</span></a></h2>
+                            <p class="listing__address"><strong>9300 Quintanna Ct</strong>Elk Grove, CA 95758</p>
+                            <ul class="listing__facts">
+                                <li><svg><use href="#i-bed"/></svg><b>2</b> bd</li>
+                                <li><svg><use href="#i-bath"/></svg><b>2</b> ba</li>
+                                <li><svg><use href="#i-area"/></svg><b>1,044</b> sq ft</li>
+                                <li><svg><use href="#i-lot"/></svg><b>9,291</b> sq ft lot</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="cta reveal">
+                    <p class="eyebrow">Selling Your Home?</p>
+                    <h2>Want results like these?</h2>
+                    <p>Find out what your home could sell for in today’s market. Jennifer will walk you through pricing, preparation, and timing.</p>
+                    <div class="cta__actions">
+                        <a href="contact.html" class="btn btn--gold" data-contact>Get in Touch</a>
+                        <a href="tel:+14084382280" class="btn btn--outline-light">Call 408-438-2280</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="brand" aria-label="Jennifer Liu Homes, home">
+                        <span class="brand__mark" aria-hidden="true">JL</span>
+                        <span class="brand__text">
+                            <span class="brand__name">Jennifer Liu</span>
+                            <span class="brand__tag">Homes</span>
+                        </span>
+                    </a>
+                    <p class="footer__about">Helping families buy and sell homes across San Jose and the Bay Area with local insight, honest advice, and skilled negotiation.</p>
+                    <div class="social">
+                        <a href="https://ibb.co/myWYM9V" target="_blank" rel="noopener" aria-label="WeChat"><img src="images/wechat logo.webp" alt=""></a>
+                        <a href="https://ibb.co/wdwCyj9" target="_blank" rel="noopener" aria-label="LINE"><img src="images/line logo.webp" alt=""></a>
+                        <a href="https://www.instagram.com/jliu05_888/" target="_blank" rel="noopener" aria-label="Instagram"><img src="images/instagram logo.webp" alt=""></a>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="footer__title">Explore</h2>
+                    <ul class="footer__links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="recent-sales.html">Recent Sales</a></li>
+                        <li><a href="monthly-news.html">Monthly News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="footer__title">Get in Touch</h2>
+                    <ul class="footer__links">
+                        <li><a href="tel:+14084382280">408-438-2280</a></li>
+                        <li><a href="mailto:jenniferliu5588@gmail.com">jenniferliu5588@gmail.com</a></li>
+                        <li>Realtor® · DRE# 02202452</li>
+                    </ul>
+                    <a class="footer__partner" href="https://www.morganhomeloan.com/" target="_blank" rel="noopener">
+                        <img src="images/morgan logo.webp" alt="Morgan Real Estate">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>© <span data-year>2026</span> Jennifer Liu Homes. All rights reserved.</span>
+                <span>San Jose, California</span>
+            </div>
+        </div>
+    </footer>
+
     <script src="app.js"></script>
 
     <script>
         window.embeddedChatbotConfig = {
-        chatbotId: "K0fJ2DIQcPcgmgCNC3PA2",
-        domain: "www.chatbase.co"
+            chatbotId: "K0fJ2DIQcPcgmgCNC3PA2",
+            domain: "www.chatbase.co"
         }
-        </script>
-        <script
-        src="https://www.chatbase.co/embed.min.js"
-        chatbotId="K0fJ2DIQcPcgmgCNC3PA2"
-        domain="www.chatbase.co"
-        defer>
-        </script>
-      
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="K0fJ2DIQcPcgmgCNC3PA2" domain="www.chatbase.co" defer></script>
 </body>
 </html>

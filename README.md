@@ -25,7 +25,7 @@ Welcome to Jennifer Liu Homes, a real estate website designed to provide users w
 </div>
 
 - **Responsive Navigation Bar**: A responsive navigation bar that includes links to the main sections of the site (Home, Recent Sales, Monthly News, and Contact).
-- **Contact Form Popup**: Users can contact Jennifer Liu by filling out a form in a pop-up window. The form captures essential information such as the user's name, email, phone number, and message.
+- **Contact Form**: Users can reach Jennifer Liu from the Contact page or from the "Work with Jennifer" pop-up available on every page. The form captures name, email, phone, what they're interested in, and a message, and sends without leaving the page.
 - **Interactive Chatbot**: An embedded chatbot assists users with questions about Jennifer Liu Homes and provides general information based on user input.
 - **Property Listings (Recent Sales)**: Displays recent sales data including property images, prices, and details like the number of bedrooms, bathrooms, and square footage.
 - **Monthly News Section**: Provides updates on the real estate market and other industry insights, with links to detailed articles.
@@ -40,7 +40,7 @@ Welcome to Jennifer Liu Homes, a real estate website designed to provide users w
 - **Home Page**: Includes Jennifer Liu’s branding, contact information, and a primary call-to-action button that opens the contact form popup.
 - **Recent Sales**: Lists recent property sales with details like location, price, and home features. Each property includes a link to view more details on Redfin.
 - **Monthly News**: Provides a list of recent news articles related to real estate, with links to the full articles.
-- **Contact**: Contains a form for users to fill out and submit to contact Jennifer Liu directly. Social media icons for WeChat, Line, and Instagram are also included.
+- **Contact**: A dedicated page with the contact form, phone, email, license number, and WeChat, LINE, and Instagram links.
 
 <div style="text-align: center;">
 
@@ -50,7 +50,7 @@ Welcome to Jennifer Liu Homes, a real estate website designed to provide users w
 
 - **HTML & CSS**: For structuring and styling the website.
 - **JavaScript**: Adds interactivity, such as the navigation toggle and the contact form popup.
-- **SMTPJS**: Used to send emails from the contact form.
+- **Web3Forms**: Delivers contact form submissions by email.
 - **Chatbase**: An embedded chatbot for user interaction.
 - **Netlify**: Hosts the website, making it publicly accessible.
 
@@ -73,8 +73,14 @@ Welcome to Jennifer Liu Homes, a real estate website designed to provide users w
 - `index.html`: The homepage of the website.
 - `recent-sales.html`: The page showcasing recent property sales.
 - `monthly-news.html`: The page containing monthly news and real estate updates.
-- `app.js`: Contains JavaScript for interactivity, including the mobile menu toggle and contact form popup.
-- `styles.css`: Styles for the entire website, including responsive design.
+- `contact.html`: The contact page.
+- `app.js`: Mobile menu, contact pop-up, form submission, and scroll animations.
+- `styles.css`: Styles for the entire website. Colors, fonts, and spacing are defined as variables at the top of the file.
+
+### Updating content
+
+- **New sale**: In `recent-sales.html`, copy an `<article class="listing">` block, paste it at the top of the list, and update the photo, Redfin link, price, and details. Update the totals in the page header and the stats on the home page, and swap the newest sale into the home page's "Recently sold" section.
+- **New market report**: In `monthly-news.html`, copy a `news-card` link, paste it at the top, and move the `news-card--featured` class onto it. Update the home page's "latest market reports" section to match.
 
 <div style="text-align: center;">
 
